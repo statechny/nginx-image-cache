@@ -1,0 +1,25 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: backend
+    volumes:
+      - ./backend/images:/usr/src/app/images
+    ports:
+      - "3000:3000"
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - nginx_cache:/var/cache/nginx
+    depends_on:
+      - backend
+
+volumes:
+  nginx_cache:
