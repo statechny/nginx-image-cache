@@ -13,7 +13,7 @@ This project sets up an Nginx server that caches images only after they've been 
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/nginx-image-cache.git
+   git clone https://github.com/statechny/nginx-image-cache
    cd nginx-image-cache
    ```
    
